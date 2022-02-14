@@ -59,37 +59,37 @@ export default {
       set: val => {
         $store.commit('mes/updateUserNameState', val)
       }
-      }) 
+      })
     const messages = computed({
       get: () => $store.state.mes.messages,
       set: val => {
         $store.commit('mes/updateMessagesState', val)
       }
-    }) 
+    })
     const intervalCtx = computed({
       get: () => $store.state.mes.intervalCtx,
       set: val => {
         $store.commit('mes/updateIntervalCtxState', val)
       }
-    }) 
+    })
     const lastMsgID = computed({
       get: () => $store.state.mes.lastMsgID,
       set: val => {
         $store.commit('mes/updateLastMsgIDState', val)
       }
-    }) 
+    })
     const messageText = computed({
       get: () => $store.state.mes.messageText,
       set: val => {
         $store.commit('mes/updateMessageTextState', val)
       }
-    }) 
+    })
     return {
-      $store, userName, messages, intervalCtx, lastMsgID,  messageText,   
-      
+      $store, userName, messages, intervalCtx, lastMsgID,  messageText,
+
     }
   },
-   mounted() {
+  mounted() {
     // this.userName = "Login";
     this.intervalCtx = setInterval(async () => {
       try {
@@ -105,9 +105,6 @@ export default {
     clearInterval(this.intervalCtx);
   },
   methods: {
-
-
-    
     // Реакция на кнопку отправки
     async onSendClick() {
       // на бекэнде
@@ -117,7 +114,7 @@ export default {
         this.message = "";
       } catch (e) {
         console.error(e);
-      }  
+      }
       //на фронте
       // var currenttime = new Date()
       // this.messages={
@@ -125,7 +122,7 @@ export default {
       //   MessageText: this.messageText,
       //   TimeStamp: currenttime.getHours() + ":" + currenttime.getMinutes() + ":" + currenttime.getSeconds()
       // }
-      
+
     },
   },
 }
