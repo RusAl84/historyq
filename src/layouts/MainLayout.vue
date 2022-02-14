@@ -12,7 +12,7 @@
         />
 
         <q-toolbar-title>
-          Ёж мессенджер
+          Путешествие в историю
         </q-toolbar-title>
 
         <div> v1.0</div>
@@ -54,9 +54,14 @@ const linksList = [
     icon: 'school',
     link: '/'
   },
+    {
+    title: 'Путешествие в историю',
+    icon: 'code',
+    link: '/history'
+  },
   {
     title: 'Авторизация',
-    icon: 'code',
+    icon: 'login',
     link: '/Auth'
   },
   {
